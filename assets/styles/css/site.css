@@ -8,7 +8,7 @@ body {
 #searchTerm {
   font-size: 52px;
   max-width: 100%;
-  text-align: center; }
+  text-align: left; }
 
 #search {
   border: 3px solid black;

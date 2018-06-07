@@ -31,7 +31,6 @@ $(document).ready(function () {
   ]};
 
   var username;
-  $('.loader-container').hide();
 
   // inside click function
   // -----------------------------------------------------------------------------
@@ -76,10 +75,10 @@ $(document).ready(function () {
 // -----------------------------------------------------------------------------
 $(document).ajaxStop(function () {
   console.log('ajax stop');
-  $('.loader-container').hide();
+  $('.loader-container').addClass('hidden');
 });
 
 $(document).ajaxStart(function () {
   console.log('ajax start');
-  $('.loader-container').show();
+  $('.loader-container').removeClass('hidden');
 });
