@@ -1,0 +1,19 @@
+{
+  "name": "debugged",
+  "version": "1.0.0",
+  "description": "The purpose of this test is to get an idea of your abilities with html, css, and javascript responsive component.",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "consolidate": "^0.15.1",
+    "handlebars": "^4.0.11"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

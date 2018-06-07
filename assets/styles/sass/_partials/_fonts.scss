@@ -1,0 +1,14 @@
+// font families
+$san-serif: sans-serif;
+$open-sans: 'Open Sans';
+
+// font sizes
+$thirteen: 13px;
+$eighteen: 18px;
+$twentytwo: 22px;
+$fiftyone: 51px;
+$sixtytwo: 62px;
+
+// plus and minus signs, created with css linear-gradient
+$plus-gradient: linear-gradient(to bottom, transparent, transparent 45%, black 45%, black 55%,  transparent 55%), linear-gradient(to right, transparent 45%, black 45%, black 55%, transparent 55%);
+$minus-gradient: linear-gradient(to bottom, transparent, transparent 45%, black 45%, black 55%,  transparent 55%);

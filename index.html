@@ -1,0 +1,44 @@
+<!Doctype html>
+<html>
+  <head>
+      <!--meta tag or viewport to make site adjust itself on different screens-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>SDG.la Code Example</title>
+      <link href="assets/styles/css/site.css" rel="stylesheet">
+      <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+  </head>
+
+  <body>
+    <input type="text" id="searchTerm">
+    <button id="search" class="btn">Submit</button>
+    <ul id="stateList">
+    </ul>
+    <div id="results" class="hidden">
+      <div class="title title--initial-result title--name">Name</div>
+      <div class="title title--initial-result title--owner">Owner</div>
+      <div class="title title--secondary-result title--language hidden">Language</div>
+      <div class="title title--secondary-result title--followers hidden">Followers</div>
+      <div class="title title--secondary-result title--url hidden">Users</div>
+      <div class="title title--secondary-result title--description hidden">Description</div>
+    </div>
+
+    <div class="loader-container">
+      <div class="container">
+        <div class="box"></div>
+      </div>
+    </div>
+
+    <!--scripts here for better performance and speed-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js"></script>
+    <script id="myTemplate" type="text/x-handlebars-template">
+      {{#each states}}
+      <li>{{name}}</li>
+      {{/each}}
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js"></script>
+
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
