@@ -1,3 +1,7 @@
+// sample data
+// -----------------------------------------------------------------------------
+
+
 $(document).ready(function () {
   var dataHardcoded = {states: [
       {name:"Pennsylvania"},
@@ -44,12 +48,13 @@ $(document).ready(function () {
       contentType: "application/json; charset=utf-8",
       dataType: "json",
       success: function(data, status, jqXHR) {
-        var dataComingBack;
-
-        dataComingBack = JSON.stringify(data);
-
-
         $("#results").toggleClass('hidden');
+
+        var monkeyList = new List('test-list', {
+          valueNames: ['name'],
+          page: 3,
+          pagination: true
+        });
 
         // variable for script it shows up on page
         var source = $("#myTemplate").html();
@@ -57,7 +62,7 @@ $(document).ready(function () {
         // var html = template(dataComingBack);
         var html = template(data);
 
-        console.log('data coming back', dataComingBack);
+        // console.log('data coming back', dataComingBack);
         console.log('reposHardcoded', reposHardcoded);
         console.log('data', data);
         // var oneToTwenty = _forEach
