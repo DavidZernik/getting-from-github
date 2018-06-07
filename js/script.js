@@ -38,7 +38,6 @@ $(document).ready(function () {
   $("#search").on("click", function() {
     var searchTerm = $('#searchTerm').val();
     var url =  "https://api.github.com/legacy/repos/search/";
-    console.log('search term!!', searchTerm);
 
     $.ajax({
       url: url + searchTerm,
@@ -47,30 +46,30 @@ $(document).ready(function () {
       dataType: "json",
       success: function(data, status, jqXHR) {
         var dataComingBack;
-        console.log(data);
-        console.log('data stringified', JSON.stringify(data.repositories[0]["username"]));
-        username = JSON.stringify(data.repositories[0]["username"]);
+
         dataComingBack = JSON.stringify(data);
-        // console.log('data coming back', dataComingBack.repositories);
 
-        // $("#results").html();
+
         $("#results").toggleClass('hidden');
-
-        $("#results").prepend(username);
 
         // variable for script it shows up on page
         var source = $("#myTemplate").html();
-        console.log('reposHardcoded here', username);
         var template = Handlebars.compile(source);
-        var html = template(reposHardcoded);
-        $("#stateList").html(html);
+        // var html = template(dataComingBack);
+        var html = template(data);
 
+        console.log('data coming back', dataComingBack);
+        console.log('reposHardcoded', reposHardcoded);
+        console.log('data', data);
+        // var oneToTwenty = _forEach
+        $("#stateList").html(html);
       }
     })
     .done(function() {
       console.log("success");
     })
   });
+
 });
 
 // Stop and start for loader image
