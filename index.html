@@ -11,8 +11,7 @@
   <body>
     <input type="text" id="searchTerm">
     <button id="search" class="btn">Submit</button>
-    <ul id="stateList">
-    </ul>
+    <div id="stateList"></div>
     <div id="results" class="hidden">
       <div class="title title--initial-result title--name">Name</div>
       <div class="title title--initial-result title--owner">Owner</div>
@@ -32,8 +31,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js"></script>
     <script id="myTemplate" type="text/x-handlebars-template">
-      {{#each states}}
-      <li>{{name}}</li>
+      {{#each repositories}}
+        {{created}}
       {{/each}}
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js"></script>
