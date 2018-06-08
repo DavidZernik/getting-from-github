@@ -35,7 +35,7 @@
     </div>
 
     <!-- Pagination testing -->
-    <div id="test-list">
+    <!-- <div id="test-list">
       <input type="text" class="search" />
       <ul class="list">
         <li><p class="name">Guybrush Threepwood</p></li>
@@ -54,34 +54,19 @@
         <li><p class="name">Cannibals</p></li>
       </ul>
       <ul class="pagination"></ul>
-    </div>
+    </div> -->
 
     <!--scripts here for better performance and speed-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js"></script>
     <script id="myTemplate" type="text/x-handlebars-template">
-      {{#each repositories as |repo|}}
-        <div>{{repo.name}}</div>
-      {{/each}}
-
       <div id="test-list1">
         <ul class="list">
-          <li><p class="name1">Guybrush Threepwood</p></li>
-          <li><p class="name1">Elaine Marley</p></li>
-          <li><p class="name1">LeChuck</p></li>
-          <li><p class="name1">Stan</p></li>
-          <li><p class="name1">Voodoo Lady</p></li>
-          <li><p class="name1">Herman Toothrot</p></li>
-          <li><p class="name1">Meathook</p></li>
-          <li><p class="name1">Carla</p></li>
-          <li><p class="name1">Otis</p></li>
-          <li><p class="name1">Rapp Scallion</p></li>
-          <li><p class="name1">Rum Rogers Sr.</p></li>
-          <li><p class="name1">Men of Low Moral Fiber</p></li>
-          <li><p class="name1">Murray</p></li>
-          <li><p class="name1">Cannibals</p></li>
+          {{#each repositories as |repo|}}
+            <li><p class="name1">{{repo.name}}</p></li>
+          {{/each}}
         </ul>
-        <ul class="pagination1"></ul>
+        <ul class="pagination"></ul>
       </div>
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js"></script>

@@ -50,23 +50,21 @@ $(document).ready(function () {
       success: function(data, status, jqXHR) {
         $("#results").toggleClass('hidden');
 
-        var monkeyList = new List('test-list', {
-          valueNames: ['name'],
-          page: 3,
-          pagination: true
-        });
-
         // variable for script it shows up on page
         var source = $("#myTemplate").html();
         var template = Handlebars.compile(source);
-        // var html = template(dataComingBack);
         var html = template(data);
 
-        // console.log('data coming back', dataComingBack);
         console.log('reposHardcoded', reposHardcoded);
         console.log('data', data);
         // var oneToTwenty = _forEach
         $("#stateList").html(html);
+
+        var monkeyList = new List('test-list1', {
+          valueNames: ['name1'],
+          page: 10,
+          pagination: true
+        });
       }
     })
     .done(function() {
