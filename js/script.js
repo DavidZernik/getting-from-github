@@ -61,7 +61,7 @@ $(document).on('click', '.name', function () {
   console.log('clicked name!!!');
       if ($(this).next().is(':hidden')) {
         $(this).next().slideDown();
-        $(this).css('color', '#FFF');
+        $(this).css('color', '#eaeaea');
 
       } else {
           $(this).next().slideUp();

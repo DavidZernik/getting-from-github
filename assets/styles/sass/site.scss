@@ -147,9 +147,14 @@ body{
   background: gray;
 }
 
+.container {
+  height: 100%;
+  width: 95%;
+}
+
 .text-input{
   position: relative;
-  margin-top: 50px;
+  margin-top: 130px;
   max-width: 90%;
   text-align: center;
 
