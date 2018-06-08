@@ -24,6 +24,12 @@ body {
   display: flex;
   justify-content: flex-start;
   margin-top: 8px;
+  transition: color 0.3s ease;
+
+  &:hover {
+    cursor: pointer;
+    color: #6b6b6b;
+  }
 }
 
 #search {

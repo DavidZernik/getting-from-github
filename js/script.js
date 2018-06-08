@@ -45,6 +45,19 @@ $(document).ready(function () {
           page: 10,
           pagination: true
         });
+
+        $('.category__extra-info-container').hide();
+
+        // sliding extra descriptions
+        // -----------------------------------------------------------------------------
+        $('.name').on('click', function() {
+          console.log('clicked name!!!');
+              if ($(this).next().is(':hidden')) {
+                $(this).next().slideDown();
+              } else {
+                  $(this).next().slideUp();
+              }
+        });
       }
     })
     .done(function() {

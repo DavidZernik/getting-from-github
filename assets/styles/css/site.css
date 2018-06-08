@@ -17,7 +17,11 @@ body {
 .name {
   display: flex;
   justify-content: flex-start;
-  margin-top: 8px; }
+  margin-top: 8px;
+  transition: color 0.3s ease; }
+  .name:hover {
+    cursor: pointer;
+    color: #6b6b6b; }
 
 #search {
   border: 3px solid black;
