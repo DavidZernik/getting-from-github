@@ -35,14 +35,16 @@
         <div class="list">
           {{#each repositories as |repo|}}
             <div class="name">
-              <!-- <h2>Name</h2> -->
               <span class="category category--name">{{repo.name}}</span>
               <span class="category category--owner">{{repo.owner}}</span>
             </div>
-            <p class="category__extra-info"><i>Language: {{repo.language}}</i></p>
-            <p class="category__extra-info"><i>Followers: {{repo.followers}}</i></p>
-            <p class="category__extra-info"><i>Url: {{repo.url}}</i></p>
-            <p class="category__extra-info"><i>Description: {{repo.description}}</i></p>
+
+            <div class="category__extra-info-container">
+              <p class="category__extra-info"><i>Language: {{repo.language}}</i></p>
+              <p class="category__extra-info"><i>Followers: {{repo.followers}}</i></p>
+              <p class="category__extra-info"><i>Url: {{repo.url}}</i></p>
+              <p class="category__extra-info"><i>Description: {{repo.description}}</i></p>
+            </div>
           {{/each}}
         </div>
         <ul class="pagination"></ul>
