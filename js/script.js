@@ -1,22 +1,18 @@
-// sample data
-// -----------------------------------------------------------------------------
 $(document).ready(function () {
-  var reposHardcoded = {repositories: [
-      {
-        created:"2012-02-01T13:52:00Z",
-        created_at: "2012-02-01T13:52:00Z"
-      },
-      {name:"NJ"},
-      {name:"Florida"},
-      {name:"California"},
-      {name:"Texas"},
-      {name:"New Mexico"},
-      {name:"Arizona"},
-      {name:"Maine"},
-      {name:"NH"},
-      {name:"Montana"},
-      {name:"Oklahoma"}
-  ]};
+
+  $('.name').on('click', function() {
+    console.log('clicked name!!!');
+        if ($(this).next().is(':hidden')) {
+          $(this).next().slideDown();
+          $(this).css('color', '#E03616');
+
+        } else {
+          console.log('worked name!!!');
+
+            $(this).next().slideUp();
+            $(this).css('color', 'black');
+        }
+  });
 
   // inside click function
   // -----------------------------------------------------------------------------
@@ -36,7 +32,6 @@ $(document).ready(function () {
         var template = Handlebars.compile(source);
         var html = template(data);
 
-        console.log('reposHardcoded', reposHardcoded);
         console.log('data', data);
         $("#stateList").html(html);
 
@@ -47,17 +42,6 @@ $(document).ready(function () {
         });
 
         $('.category__extra-info-container').hide();
-
-        // sliding extra descriptions
-        // -----------------------------------------------------------------------------
-        $('.name').on('click', function() {
-          console.log('clicked name!!!');
-              if ($(this).next().is(':hidden')) {
-                $(this).next().slideDown();
-              } else {
-                  $(this).next().slideUp();
-              }
-        });
       }
     })
     .done(function() {
@@ -66,6 +50,24 @@ $(document).ready(function () {
   });
 });
 
+// This event needs to bound to static element in order to work with pagination
+$(document).on('click', "li", function () {
+  console.log('harry!');
+  $('.category__extra-info-container').hide();
+});
+
+// This event also needs to bound to static element in order to work with pagination
+$(document).on('click', '.name', function () {
+  console.log('clicked name!!!');
+      if ($(this).next().is(':hidden')) {
+        $(this).next().slideDown();
+        $(this).css('color', '#FFF');
+
+      } else {
+          $(this).next().slideUp();
+          $(this).css('color', 'black');
+      }
+});
 // Stop and start for loader image
 // -----------------------------------------------------------------------------
 $(document).ajaxStop(function () {
