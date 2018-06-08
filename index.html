@@ -19,14 +19,14 @@
     <!-- <input type="text" id="searchTerm"> -->
     <div id="search" class="btn">Submit</div>
     <div id="stateList"></div>
-    <div id="results" class="hidden">
+    <!-- <div id="results" class="hidden">
       <div class="title title--initial-result title--name">Name</div>
       <div class="title title--initial-result title--owner">Owner</div>
       <div class="title title--secondary-result title--language hidden">Language</div>
       <div class="title title--secondary-result title--followers hidden">Followers</div>
       <div class="title title--secondary-result title--url hidden">Users</div>
       <div class="title title--secondary-result title--description hidden">Description</div>
-    </div>
+    </div> -->
 
     <div class="loader-container hidden">
       <div class="container">
@@ -38,13 +38,19 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js"></script>
     <script id="myTemplate" type="text/x-handlebars-template">
+      <div class="titles-container">
+        <span class="title title--name">Name</span>
+        <span class="title title--owner">Owner</span>
+      </div>
       <div id="test-list">
         <div class="list">
           {{#each repositories as |repo|}}
             <div class="name">
+              <!-- <h2>Name</h2> -->
               <span class="category category--name">{{repo.name}}</span>
               <span class="category category--owner">{{repo.owner}}</span>
             </div>
+            <p>Language: {{repo.language}}</p>
           {{/each}}
         </div>
         <ul class="pagination"></ul>

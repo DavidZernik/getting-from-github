@@ -41,10 +41,6 @@ body {
   display: flex;
   justify-content: flex-start; }
 
-.title {
-  padding: 20px;
-  border: 1px solid #DDDDDD; }
-
 .loader-container {
   padding: 20px;
   margin: 0;
@@ -134,7 +130,12 @@ body {
     transition-delay: 0.2s; }
 
 .category {
-  width: 40%; }
+  width: 40%;
+  font-size: 25px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-right: 3%; }
 
 li {
   display: inline-block;
