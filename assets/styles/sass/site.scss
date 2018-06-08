@@ -60,11 +60,6 @@ body {
   display: none !important;
 }
 
-#results {
-  display: flex;
-  justify-content: flex-start;
-}
-
 .titles-container {
   display: flex;
   margin-bottom: 15px;
@@ -78,7 +73,7 @@ body {
 }
 
 .category__extra-info {
-  margin: 0 0 4px 0;
+  margin: 0 0 4px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -97,7 +92,7 @@ body {
   margin-right: 3%;
 }
 
-// text input styles AND loader image styles imported from Codepen, and then customized
+// text input styles AND square loading image styles imported from Codepen, and then customized
 .loader-container {
   padding: 20px;
   margin: 0;

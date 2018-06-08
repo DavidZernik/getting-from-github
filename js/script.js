@@ -24,8 +24,8 @@ $(document).ready(function () {
       $.ajax({
         url: url + searchTerm,
         type: 'GET',
-        contentType: "application/json; charset=utf-8",
-        dataType: "json"
+        contentType: 'application/json; charset=utf-8',
+        dataType: 'json'
       });
     }
 
@@ -42,7 +42,7 @@ $(document).ready(function () {
         var template = Handlebars.compile(source);
         var html = template(data);
 
-        $("#listForPagination").html(html);
+        $('#listForPagination').html(html);
 
         var paginationItems = new List('test-list', {
           valueNames: ['name'],
@@ -56,7 +56,7 @@ $(document).ready(function () {
 });
 
 // This event needs to bound to static element in order to work with pagination
-$(document).on('click', "li", function () {
+$(document).on('click', 'li', function () {
   $('.category__extra-info-container').hide();
 });
 
@@ -75,11 +75,9 @@ $(document).on('click', '.name', function () {
 // Stop and start for loader image
 // -----------------------------------------------------------------------------
 $(document).ajaxStop(function () {
-  console.log('ajax stop');
   $('.loader-container').addClass('hidden');
 });
 
 $(document).ajaxStart(function () {
-  console.log('ajax start');
   $('.loader-container').removeClass('hidden');
 });
