@@ -121,11 +121,17 @@ body {
     transition: all 0.3s ease-out;
     transition-delay: 0.2s; }
 
+#stateList {
+  margin-top: 40px; }
+
+.category {
+  margin: 0 40px; }
+
 li {
   display: inline-block;
   padding: 5px; }
 
 a {
   color: black;
-  font-size: 25px;
+  font-size: 35px;
   text-decoration: none; }

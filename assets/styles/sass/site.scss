@@ -153,6 +153,14 @@ body{
   }
 }
 
+#stateList {
+  margin-top: 40px;
+}
+
+.category {
+  margin: 0 40px;
+}
+
 // Pagination testing
 li {
   display:inline-block;
@@ -161,7 +169,7 @@ li {
 
 a {
   color: black;
-  font-size: 25px;
+  font-size: 35px;
   text-decoration: none;
 }
 

@@ -40,9 +40,11 @@
     <script id="myTemplate" type="text/x-handlebars-template">
       <div id="test-list">
         <div class="list">
-          <h1>Name</h1>
           {{#each repositories as |repo|}}
-            <p class="name">{{repo.name}}</p>
+            <div class="name">
+              <span class="category category--name">{{repo.name}}</span>
+              <span class="category category--owner">{{repo.owner}}</span>
+            </div>
           {{/each}}
         </div>
         <ul class="pagination"></ul>
