@@ -30,7 +30,6 @@ $(document).ready(function () {
       contentType: "application/json; charset=utf-8",
       dataType: "json",
       success: function(data, status, jqXHR) {
-        // $("#search").addClass('hidden');
 
         // variable for script it shows up on page
         var source = $("#myTemplate").html();
