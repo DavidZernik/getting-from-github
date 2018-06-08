@@ -3,16 +3,23 @@ body {
   height: 100%;
   width: 100%;
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: Montserrat;
+  background: gray; }
 
 #searchTerm {
   font-size: 52px;
   width: 100%;
   text-align: left; }
 
-#stateList {
+#listForPagination {
   width: 90%;
-  margin: 40px auto 0; }
+  margin: 40px auto; }
 
 .name {
   display: flex;
@@ -52,6 +59,7 @@ body {
 
 .title {
   width: 40%;
+  margin-right: 3%;
   font-size: 24px;
   text-decoration: underline; }
 
@@ -59,6 +67,14 @@ body {
   margin: 0 0 4px 0; }
   .category__extra-info:first-of-type {
     margin-top: 10px; }
+
+.category {
+  width: 40%;
+  font-size: 25px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-right: 3%; }
 
 .loader-container {
   padding: 20px;
@@ -99,15 +115,6 @@ body {
 @keyframes spin {
   100% {
     transform: rotate(360deg); } }
-
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  font-family: Montserrat;
-  background: gray; }
 
 .container {
   height: 100%;
@@ -150,14 +157,6 @@ body {
     padding: 10px;
     transition: all 0.3s ease-out;
     transition-delay: 0.2s; }
-
-.category {
-  width: 40%;
-  font-size: 25px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  margin-right: 3%; }
 
 li {
   display: inline-block;

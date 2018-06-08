@@ -3,6 +3,13 @@ body {
   width: 100%;
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: Montserrat;
+  background: gray;
 }
 
 #searchTerm {
@@ -11,13 +18,9 @@ body {
   text-align: left;
 }
 
-#stateList {
+#listForPagination {
   width: 90%;
-  margin: 40px auto 0;
-}
-
-#test-list {
-  // display: flex;
+  margin: 40px auto;
 }
 
 .name {
@@ -65,15 +68,13 @@ body {
 .titles-container {
   display: flex;
   margin-bottom: 15px;
-  // justify-content: center;
 }
 
 .title {
   width: 40%;
-  // margin: 0 auto;
+  margin-right: 3%;
   font-size: 24px;
   text-decoration: underline;
-  // text-align: center;
 }
 
 .category__extra-info {
@@ -84,7 +85,16 @@ body {
   }
 }
 
-// input field and loader styles imported from Codepen, and then customized
+.category {
+  width: 40%;
+  font-size: 25px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-right: 3%;
+}
+
+// text input styles AND loader image styles imported from Codepen, and then customized
 .loader-container {
   padding: 20px;
   margin: 0;
@@ -136,16 +146,6 @@ body {
 }
 
 @import  url(https://fonts.googleapis.com/css?family=Montserrat);
-
-body{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  font-family: Montserrat;
-  background: gray;
-}
 
 .container {
   height: 100%;
@@ -199,16 +199,7 @@ body{
   }
 }
 
-.category {
-  width: 40%;
-  font-size: 25px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  margin-right: 3%;
-}
-
-// Pagination testing
+// Pagination styles
 li {
   display:inline-block;
   padding:5px;
