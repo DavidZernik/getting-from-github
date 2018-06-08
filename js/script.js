@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
   $('.name').on('click', function() {
     console.log('clicked name!!!');
         if ($(this).next().is(':hidden')) {
@@ -15,7 +14,7 @@ $(document).ready(function () {
   });
 
   // inside click function
-  // -----------------------------------------------------------------------------
+  // ------------------------------------------------------------
   $("#search").on("click", function() {
     var searchTerm = $('#searchTerm').val();
     var url =  "https://api.github.com/legacy/repos/search/";

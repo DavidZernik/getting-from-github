@@ -7,13 +7,13 @@ body {
 
 #searchTerm {
   font-size: 52px;
-  max-width: 100%;
+  width: 100%;
   text-align: left;
 }
 
 #stateList {
-  margin-top: 40px;
   width: 90%;
+  margin: 40px auto 0;
 }
 
 #test-list {
@@ -35,7 +35,7 @@ body {
 #search {
   border: 3px solid black;
   width: 350px;
-  margin-top: 20px;
+  margin: 30px auto 0;
   font-size: 40px;
   transition: background-color 0.3s ease;
   max-width: 90%;
@@ -65,13 +65,15 @@ body {
 .titles-container {
   display: flex;
   margin-bottom: 15px;
+  // justify-content: center;
 }
 
 .title {
   width: 40%;
-  margin-right: 3%;
+  // margin: 0 auto;
   font-size: 24px;
   text-decoration: underline;
+  // text-align: center;
 }
 
 .category__extra-info {
@@ -86,7 +88,6 @@ body {
 .loader-container {
   padding: 20px;
   margin: 0;
-  width: 700px;
   text-align: center;
   font-size: 0;
 
@@ -95,7 +96,6 @@ body {
     display: inline-block;
     box-sizing: border-box;
     padding: 30px;
-    width: 25%;
     height: 140px;
   }
 }
@@ -107,6 +107,7 @@ body {
   width: 80px;
   height: 80px;
   animation: spin 3s infinite linear;
+  margin: 0 auto;
 
   &:before {
     content: '';
@@ -143,7 +144,6 @@ body{
   justify-content: center;
   height: 100vh;
   font-family: Montserrat;
-  // background: #E03616; => switch this back at the right time
   background: gray;
 }
 
@@ -154,7 +154,7 @@ body{
 
 .text-input{
   position: relative;
-  margin-top: 130px;
+  margin: 130px auto 0;
   max-width: 90%;
   text-align: center;
 
@@ -223,4 +223,9 @@ a {
   color: black;
   font-size: 35px;
   text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #6b6b6b;
+  }
 }
