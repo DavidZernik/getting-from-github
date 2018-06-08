@@ -14,20 +14,9 @@
       <input type="text" id="searchTerm" placeholder="Git it">
       <label for="input1">keyword</label>
     </div>
-    <!-- Codepen end -->
 
-    <!-- <input type="text" id="searchTerm"> -->
     <div id="search" class="btn">Submit</div>
     <div id="stateList"></div>
-    <!-- <div id="results" class="hidden">
-      <div class="title title--initial-result title--name">Name</div>
-      <div class="title title--initial-result title--owner">Owner</div>
-      <div class="title title--secondary-result title--language hidden">Language</div>
-      <div class="title title--secondary-result title--followers hidden">Followers</div>
-      <div class="title title--secondary-result title--url hidden">Users</div>
-      <div class="title title--secondary-result title--description hidden">Description</div>
-    </div> -->
-
     <div class="loader-container hidden">
       <div class="container">
         <div class="box"></div>
@@ -50,13 +39,17 @@
               <span class="category category--name">{{repo.name}}</span>
               <span class="category category--owner">{{repo.owner}}</span>
             </div>
-            <p>Language: {{repo.language}}</p>
+            <p class="category__extra-info"><i>Language: {{repo.language}}</i></p>
+            <p class="category__extra-info"><i>Followers: {{repo.followers}}</i></p>
+            <p class="category__extra-info"><i>Url: {{repo.url}}</i></p>
+            <p class="category__extra-info"><i>Description: {{repo.description}}</i></p>
           {{/each}}
         </div>
         <ul class="pagination"></ul>
       </div>
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js"></script>
+
     <!-- Pagination library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
 

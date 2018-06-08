@@ -23,6 +23,7 @@ body {
 .name {
   display: flex;
   justify-content: flex-start;
+  margin-top: 8px;
 }
 
 #search {
@@ -55,11 +56,25 @@ body {
   justify-content: flex-start;
 }
 
+.titles-container {
+  display: flex;
+  margin-bottom: 15px;
+}
 
-// .title {
-//   padding: 20px;
-//   border: 1px solid #DDDDDD;
-// }
+.title {
+  width: 40%;
+  margin-right: 3%;
+  font-size: 24px;
+  text-decoration: underline;
+}
+
+.category__extra-info {
+  margin: 0 0 4px 0;
+
+  &:first-of-type {
+    margin-top: 10px;
+  }
+}
 
 // input field and loader styles imported from Codepen, and then customized
 .loader-container {
