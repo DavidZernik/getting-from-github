@@ -3,17 +3,16 @@
   <head>
       <!--meta tag or viewport to make site adjust itself on different screens-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>SDG.la Code Example</title>
+      <title>Haus coding challenge</title>
       <link href="assets/styles/css/site.css" rel="stylesheet">
       <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
   </head>
 
   <body>
     <div class="container">
-      <!-- from Codepen -->
       <div class="text-input">
         <input type="text" id="searchTerm" placeholder="Git it">
-        <label for="input1">keyword</label>
+        <label for="input">keyword</label>
       </div>
 
       <div id="search" class="btn">Submit</div>
@@ -28,6 +27,7 @@
     <!--scripts here for better performance and speed-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js"></script>
+    <!-- Inject data into handlebars -->
     <script id="myTemplate" type="text/x-handlebars-template">
       <div class="titles-container">
         <span class="title title--name">Name</span>
@@ -52,11 +52,10 @@
         <ul class="pagination"></ul>
       </div>
     </script>
+    <!-- Handlebars library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js"></script>
-
     <!-- Pagination library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
-
     <script src="js/script.js"></script>
   </body>
 </html>

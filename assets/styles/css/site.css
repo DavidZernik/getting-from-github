@@ -64,7 +64,10 @@ body {
   text-decoration: underline; }
 
 .category__extra-info {
-  margin: 0 0 4px 0; }
+  margin: 0 0 4px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; }
   .category__extra-info:first-of-type {
     margin-top: 10px; }
 
