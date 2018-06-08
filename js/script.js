@@ -13,19 +13,33 @@ $(document).ready(function () {
         }
   });
 
+  var requestCache = {};
+  var url =  "https://api.github.com/legacy/repos/search/";
+
+  function cacheOrApiCall(searchTerm) {
+    if (!requestCache[searchTerm]) {
+      console.log('not cached!!!');
+      requestCache[searchTerm] =
+      $.ajax({
+        url: url + searchTerm,
+        type: 'GET',
+        contentType: "application/json; charset=utf-8",
+        dataType: "json"
+      });
+    } else {
+      console.log('NOW ITS cached!');
+    }
+
+    return requestCache[searchTerm];
+  }
+
   // inside click function
   // ------------------------------------------------------------
   $("#search").on("click", function() {
     var searchTerm = $('#searchTerm').val();
-    var url =  "https://api.github.com/legacy/repos/search/";
 
-    $.ajax({
-      url: url + searchTerm,
-      type: 'GET',
-      contentType: "application/json; charset=utf-8",
-      dataType: "json",
-      success: function(data, status, jqXHR) {
-
+    cacheOrApiCall(searchTerm)
+      .then(function(data, status, jqXHR) {
         // variable for script it shows up on page
         var source = $("#myTemplate").html();
         var template = Handlebars.compile(source);
@@ -41,12 +55,8 @@ $(document).ready(function () {
         });
 
         $('.category__extra-info-container').hide();
-      }
     })
-    .done(function() {
-      console.log("success");
-    })
-  });
+  });  // closes click event
 });
 
 // This event needs to bound to static element in order to work with pagination
